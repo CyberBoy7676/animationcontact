@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Exo+2&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color:#262626;  
+    text-align: center;
+} 
+
+/* text animation  */
+h1{
+    /* font-family: 'Arvo', serif; */
+    font-family: 'Exo 2', sans-serif;
+}
+.rubber-span{
+    display: inline-block;
+    cursor: default;
+}
+
+.rubber-band{
+    user-select: none;
+    white-space: pre-wrap;
+    margin: 41px 0;
+    color: #666;
+    font-size: 55px;
+}
+
+.rubber-hide{
+    visibility: hidden;
+}
+
+.rubberBand{
+    animation-name: rubberBand;
+    transition: all 0.3s ease-out;
+    will-change: transform;
+}
+.rubberBand:hover{
+    color: #26a4f2;
+    transition: all 0.3s;
+
+    text-shadow:  0 0 2px #1DA1F2;
+} 
+
+.animated{
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes rubberBand{
+    0%{transform: scale3d(1,1,1);}
+    30%{transform: scale3d(1.25,0.75,1);}
+    40%{transform: scale3d(0.75,1.25,1);}
+    50%{transform: scale3d(1.15,0.85,1);}
+    65%{transform: scale3d(0.95,1.05,1);}
+    75%{transform: scale3d(1.05,0.95,1);}
+    100%{transform: scale3d(1,1,1);}
+}
+
+/* text animation end  */
+
+
+ul{
+    list-style: none;
+    display: flex;
+}
+ul li a{
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px; 
+    font-size: 30px;
+    color: #666;
+    background-color: #171515; 
+    line-height: 60px;    
+    border-radius: 30px;
+    margin:0 15px;
+    transform: scale(.8);
+    transition : .5s;
+}
+ 
+
+ul li:nth-child(1) a:hover{ 
+    color :#456cba;
+    transform: scale(1.9);
+    box-shadow:  0 0 40px #4267B2;
+}
+ul li:nth-child(2) a:hover{ 
+    color :#26a4f2;
+    transform: scale(1.9);
+    box-shadow:  0 0 40px #1DA1F2;
+}
+ul li:nth-child(3) a:hover{ 
+    color :#e23670;
+    transform: scale(1.9);
+    box-shadow:  0 0 40px #E1306c;
+}
+ul li:nth-child(4) a:hover{ 
+    color :#2a6cbb;
+    transform: scale(1.9);
+    box-shadow:  0 0 40px #2867B2;
+}
+ul li:nth-child(5) a:hover{ 
+    color :#ff1a1a;
+    transform: scale(1.9);
+    box-shadow:  0 0 40px #ff0000;
+}
+ul li:nth-child(6) a:hover{ 
+    color :rgb(73, 80, 87);
+    transform: scale(1.9);
+    box-shadow:  0 0 40px rgb(73, 80, 87);
+} 
+
+
+@media only screen and (max-width: 805px) {
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+    li{
+        margin: 15px 0;
+    }
+
+}
